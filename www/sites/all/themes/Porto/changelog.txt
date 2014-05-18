@@ -1,0 +1,94 @@
+1.3 (04/01/14)
+  *Additional improvements for special characters in taxonomy terms.
+  *Updated Drupal Core in full demo install.
+  *Updated Mega Slider module to latest version.
+  *Fixed issue with pagination in Portfolio block.
+  *Fixed several missing translation function wrappers. 
+  *Renamed several view node templates to fix issue with adding additional displays.
+  *Fixed issue related to LESS errors on admin pages.
+  *CSS files no longer called in preprocess_html function.
+  *Porto navigation markup/style now only applies to menus in the "Header Menu" region.
+
+1.2.3 (11/11/13)
+  *Updated "Mega Slider" to latest 2.4 version.
+  *"About author" section will no longer display if Profile2 module is not activated.
+  *Added a couple missing t() wrappers to theme generated strings.
+  *Fixed search input issue.
+
+1.2.2 (11/1/13)
+  *Fixed issue with page title bottom border color/position.
+  *Fixed issue with DB export for full install.
+
+1.2.1 (10/31/13)
+  *Fixed missing call to Drupal links in node--article.tpl.
+  *Fixed custom color not working on search icon button.
+  *Fixed issue with header search input width.
+  *Removed hyphen from in between words on Portfolio/Team category display.
+  *"Comments" will now read "Comment" in post meta if there is only one comment.
+  *Fixed issue with hashtags in Twitter widget. 
+  *Site title will use H1 tag if page title is not present, otherwise page title will use H1.
+
+1.2 (10/15/13)
+  *Social icons in Team block will only display if URL is entered into field.
+  *Fixed bug where comment date was the same as the node date.
+  *Fixed issue with Drupal classes not being added to the body tag.
+  *Fixed location issue with maps pin.
+  *Fixed bug related to team filters and multiple terms on the same node.
+  *Added support for "Popular/Recent" posts view block.
+  *Basic styling for Drupal Commerce elements (shopping cart, checkout page, order review)
+  *Button styling applied to all submit buttons.
+
+1.1.3 (09/09/13)
+  *Fixed bug related to portfolio filters and multiple terms on the same node.
+  *Added theme setting for Footer ribbon.
+  *Added unique classes to post meta element wrappers.
+  *Fixed double class definition in branding element.
+  *Fixed issue with NivoSlider in IE.
+  *Improved handling of sitemap on full install.
+
+1.1.2 (08/28/13)
+  *Max height/width set for testimonial images.
+  *Fixed styling of "Log in" submit button on user login form.
+  *Parallax effect now properly disabled on touch devices.
+  *Fixed "zoom here" feature on Google Map.
+  *Fixed logo/sitename overlap with branding section.
+  *Added support for CSS3 animations.
+  *Fixed accordion bug on one page template.
+  *Reverted to previous version of Mega Slider for improved stability.
+  *Updated documentation.
+
+1.1.1 (08/14/13)
+  *Fixed a bug with the header/menu related to the 1.1 update.
+
+1.1 (08/14/13)
+  *Updated Drupal core in full installation.
+  *Added new templates for Testimonials, FAQ, Parallax and Carousel content type/View blocks.
+  *Fix for Portfolio/Team filter terms with multiple words.
+  *Support for "One Page" template.
+  *Fixed issue in IE10 related to search input button.
+  *New theme setting to toggle the use of the "sticky header".
+  *Updated Mega Slider to latest version.
+  *General bug and style fixes.
+
+1.0.3 (08/05/13)
+  *Re-organized branding section to clean up different configuration scenarios.
+  *Additional tweaks related to previous menu fix.
+  *Updated slider module.
+  *Fixed issue with search block at resolutions below 768px.
+
+1.0.2 (08/02/13)
+  *Tweaked menu preprocess functions to fix a menu depth issue.
+  *Fixed misnamed module folder in demo install.
+  *Ensure breadcrumb wrapper will never show on front page.
+  *Fixed a logic error in porto_fields causing certain field content to not display. 
+  *Lightbox on Flickr images now shows next/prev links. 
+  *Updated docs.
+  *Fixed weird permissions on Drupal folder in /licenses.
+
+1.0.1 (07/24/13)
+  *Updated Google Fonts and Maps links for SSL compatibility.
+  *Fixed PHP error on article nodes when Profile2 module is missing.
+  *Updated documentation.
+
+1.0 (07/20/13)
+  *Initial release.

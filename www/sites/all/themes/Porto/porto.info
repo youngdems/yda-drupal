@@ -1,0 +1,76 @@
+name = Porto
+description = Responsive Drupal 7 Theme. 
+core = 7.x
+engine = phptemplate
+version = 1.3
+
+; Define theme CSS.
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/fonts/font-awesome/css/font-awesome.css
+stylesheets[all][] = vendor/flexslider/flexslider.css
+stylesheets[all][] = vendor/prettyPhoto/css/prettyPhoto.css
+stylesheets[all][] = vendor/circle-flip-slideshow/css/component.css
+stylesheets[all][] = vendor/magnific-popup/magnific-popup.css
+stylesheets[all][] = vendor/isotope/jquery.isotope.css
+stylesheets[all][] = css/theme.css
+stylesheets[all][] = css/drupal-styles.css
+stylesheets[all][] = css/theme-elements.css
+stylesheets[all][] = css/theme-animate.css
+stylesheets[all][] = css/theme-blog.css
+stylesheets[all][] = css/bootstrap-responsive.css
+stylesheets[all][] = css/bootstrap-responsive-boxed.css
+stylesheets[all][] = css/theme-responsive.css
+
+; Define theme JS libraries.
+scripts[] = vendor/modernizr.js
+scripts[] = vendor/bootstrap.js
+scripts[] = vendor/jquery.easing.js
+scripts[] = vendor/jquery.cookie.js
+scripts[] = includes/twitter/jquery.tweet.js
+scripts[] = vendor/flexslider/jquery.flexslider.js
+scripts[] = vendor/circle-flip-slideshow/js/jquery.flipshow.js
+scripts[] = vendor/isotope/jquery.isotope.js
+scripts[] = vendor/prettyPhoto/js/jquery.prettyPhoto.js
+scripts[] = vendor/jflickrfeed/jflickrfeed.js
+scripts[] = vendor/jquery.mapmarker.js
+scripts[] = vendor/jquery.stellar.js
+scripts[] = vendor/jquery.gmap.js
+scripts[] = vendor/magnific-popup/magnific-popup.js
+scripts[] = vendor/jquery.validate.js
+scripts[] = vendor/jquery.appear.js
+scripts[] = js/mobile-menu.js
+scripts[] = js/plugins.js
+scripts[] = js/porto.js
+scripts[] = js/sticky.js
+
+; Define theme block regions.
+regions[header_top] = Header Top
+regions[branding] = Branding
+regions[header_icons] = Header Icons
+regions[header_menu] = Header Menu
+regions[one_page] = One Page Content
+regions[before_content] = Before Content
+regions[content] = Content
+regions[sidebar_left] = Left Sidebar
+regions[sidebar_right] = Right Sidebar
+regions[after_content] = After Content
+regions[footer_1] = Footer Box 1
+regions[footer_2] = Footer Box 2
+regions[footer_3] = Footer Box 3
+regions[footer_4] = Footer Box 4
+regions[footer_bottom_left] = Footer Bottom Left
+regions[footer_bottom_right]  = Footer Bottom Right
+
+; Define theme setting defaults.
+settings[breadcrumbs] = 1
+settings[sticky_header] = 1
+settings[skin_color] = 0088cc
+settings[site_layout] = wide
+settings[body_background] = porto_backgrounds
+settings[background_select] = az_subtle
+settings[background_select] = az_subtle
+settings[body_background_color] = CCCCCC
+settings[portfolio_columns] = span3
+settings[blog_image] = full
+settings[ribbon] = 1
+settings[ribbon_text] = "Get In Touch"

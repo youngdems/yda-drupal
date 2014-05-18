@@ -1,0 +1,104 @@
+.form-item  {margin-top: 8px !important; margin-left: 10px !important;}
+
+.form-type-textfield input {width: 40% !important;}
+
+.fieldset-legend, .options_header {width: 100%;}
+
+#edit-heading-background-select {
+	color: transparent;
+	font-size: 30px;
+}
+
+label[for=edit-background-select-az-subtle] {
+	background-image: url('../img/patterns/az_subtle.png');
+}
+
+label[for=edit-background-select-blizzard] {
+	background-image: url('../img/patterns/blizzard.png');
+}
+
+label[for=edit-background-select-bright-squares] {
+	background-image: url('../img/patterns/bright_squares.png');
+}
+
+label[for=edit-background-select-denim] {
+	background-image: url('../img/patterns/denim.png');
+}
+
+label[for=edit-background-select-fancy-deboss] {
+	background-image: url('../img/patterns/fancy_deboss.png');
+}
+
+label[for=edit-background-select-gray-jean] {
+	background-image: url('../img/patterns/gray_jean.png');
+}
+
+label[for=edit-background-select-honey-im-subtle] {
+	background-image: url('../img/patterns/honey_im_subtle.png');
+}
+
+label[for=edit-background-select-linedpaper] {
+	background-image: url('../img/patterns/linedpaper.png');
+}
+
+label[for=edit-background-select-linen] {
+	background-image: url('../img/patterns/linen.png');
+}
+
+label[for=edit-background-select-pw-maze-white] {
+	background-image: url('../img/patterns/pw_maze_white.png');
+}
+
+label[for=edit-background-select-random-grey-variations] {
+	background-image: url('../img/patterns/random_grey_variations.png');
+}
+
+label[for=edit-background-select-skin-side-up] {
+	background-image: url('../img/patterns/skin_side_up.png');
+}
+
+label[for=edit-background-select-stitched-wool] {
+	background-image: url('../img/patterns/stitched_wool.png');
+}
+
+label[for=edit-background-select-straws] {
+	background-image: url('../img/patterns/straws.png');
+}
+
+label[for=edit-background-select-subtle-grunge] {
+	background-image: url('../img/patterns/subtle_grunge.png');
+}
+
+label[for=edit-background-select-textured-stripes] {
+	background-image: url('../img/patterns/textured_stripes.png');
+}
+
+label[for=edit-background-select-wild-oliva] {
+	background-image: url('../img/patterns/wild_oliva.png');
+}
+
+label[for=edit-background-select-worn-dots] {
+	background-image: url('../img/patterns/worn_dots.png');
+}
+
+#edit-background-select {
+	color: transparent;
+	font-size: 50px;
+	padding-top: 20px;
+}
+
+.form-item-background-select {
+	max-width: 500px;
+}
+
+#edit-background-select .form-type-radio {
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+
+.form-wrapper {min-height: 20px;}
+
+.fieldset-legend {cursor: pointer;}
+
+

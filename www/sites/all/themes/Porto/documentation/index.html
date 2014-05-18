@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Porto Documentation</title>
+<link href="http://fonts.googleapis.com/css?family=Voces" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="style.css"/>
+<script src="jquery.js"></script>
+<script src="toc.js"></script>
+</head>
+<body>
+<div id="toc">
+	
+</div>
+
+
+<div id="wrapper">
+<h2>Overview</h2>
+<p>Porto is a professional, multipurpose Drupal theme perfect for any business or portfolio website. For theme support that cannot be found in this documentation, please visit our <a href="http://refaktorthemes.com/support"> support forum</a>. Once you have registered please contact us via the <a href="http://themeforest.net/user/refaktor#from" target="_blank">ThemeForest author page</a> with your forum username so you can be granted posting rights.</p>
+<p>Updated: 04/01/14<br>Author: <a href="http://refaktorthemes.com" target="_blank">Refaktor</a><br>Docs powered by: <a href="https://github.com/jgallen23/toc" target="_blank">TOC</a><br>Original design by <a href="http://themeforest.net/user/
+crivos" target="_blank">
+Crivos</a></p>
+<h2>Installation</h2>
+<p>There are several ways Porto can be installed. For existing sites that already have content, the first method will only involve the installation and activation of the theme. The second option includes a full Drupal 7 install with the same SQL database file used to create the theme demo. Please choose which installation method works best for you and follow the instructions. We do highly recommend you perform the full install, especially if you plan on using the Commerce functionality.
+<h3>Theme Only</h3>
+Option 1:
+<ul>
+  <li>Visit yourdomain.com/admin/appearance/install</li>
+  <li>Upload the Porto.zip file</li>
+  <li>Enable and set to default</li>
+</ul>
+Option 2:
+<ul>
+  <li>Extract the Porto.zip file and upload via FTP to /sites/all/themes</li>
+  <li>Visit yourdomain.com/admin/appearance/</li>
+  <li>Scroll down to "DISABLED THEMES" and set and enable Porto</li>
+</ul>
+
+<h3>Full Drupal Install</h3>
+<p>The following steps are designed for people that have experience manually installing Drupal and importing databases. If you do not feel comfortable performing these steps yourself, contact your server administrator for help. <strong>NOTE</strong> this option is for a completely new Drupal install. Do not import the provided SQL file into an existing Drupal database or you will lose all of your data!</p>
+<ol>
+<li>Create a database for this installation of Drupal and import the SQL file that came with the theme.</li>
+<li>Follow <a href="http://drupal.org/documentation/install/settings-file" target="_blank"> these directions</a> to create the settings.php file. Save this file somewhere so you can copy it over to the Drupal installation we have provided.</li>
+<li>Copy the entire contents of the /demo/porto folder to the location on your web server where you want your site to be accessed. If you want your primary domain to point to your install of Porto, copy everything inside to the root folder. If you want your site to be accessed as a subsection of your domain (for example: yourdomain.com/drupal) then simply rename the /demo/porto folder to the desired name and upload to the root of your server. Also be sure to copy over the settings.php file mentioned in the previous step</li>
+<li>Login to your site with the username <strong>Steve</strong> and the password <strong>admin</strong> and visit /admin/people to change the admin username and password.</li>
+<li>Go through the Drupal configuration found in /admin/config options and update all the necessary information to reflect your website. Also be sure to visit /admin/config/media/file-system and change the Temporary Directory.</li>
+
+</ol>
+<h2>Porto Sub-Theme</h2>
+<p><strong>Note:</strong> as of version 1.1.2 the sub-theme is the default active theme in the full demo installation.</p>
+<p>Porto comes with a shell sub-theme called Porto_sub that you can use to make customizations to the style and template structure of the parent theme without having to modify the parent theme itself. This is useful if you plan on updating the parent theme as we release updates on ThemeForest. If you performed the full install you will already see Porto_sub in the list of themes available. If you did the standalone install you can find the Porto_sub.zip file in the root of the download files and you can install it like any other theme.</p>
+<p>There is an empty stylesheet already defined which is /css/custom.css (inside the Porto_sub folder). Use this file to add all of the custom CSS that you plan on using. You can also copy any template file from the /Porto/templates folder into the /Porto_sub/templates folder and it will listen to the sub-themes template file first. This will allow you to update the parent theme as we make updates without losing your customizations. Just pay attention to the changelog and compare the parent theme files with yours and make any adjustments as needed.</p>
+<p>You will need to configure the sub-themes theme settings separately from the parent theme's, so visit /admin/appearance/settings/porto_sub to configure the theme settings for the sub-theme. You also need to configure the block regions separately.</p>
+</ol>  
+<h2>Menu</h2>
+<p>Porto has a block region called Header Menu which can be used to add any menu block you like. The demo simply uses the default Main Menu block but you can create a custom menu block if you like.</p>
+
+<img src="images/menu-2.png"><br/><br/>
+
+<p><strong>Note:</strong> make sure to check the "show as expanded" box on all parent items with children to ensure the dropdown menu works correctly.</p>
+
+
+<h2>Modules</h2>
+<p>You can find all of the modules used in the demo in the modules folder in the root of the folder you downloaded from ThemeForest. Not all modules are required to use the theme, but below is a list of modules you will need to utilize various elements of the theme</p>
+
+<h4>General Required Modules</h4>
+<ul>
+<li><a href="http://drupal.org/project/jquery_update">jQuery update (7.x-2.x-dev)</a></li>
+<li><a href="http://drupal.org/project/ctools">ctools</a></li>
+<li><a href="http://drupal.org/project/views">Views</a></li>
+<li><a href="https://drupal.org/project/jquery_colorpicker">jQuery Colorpicker</a></li>
+<li><a href="https://drupal.org/project/less">LESS CSS Preprocessor</a></li>
+</ul>
+
+<h4>NivoSlider</h4>
+<ul>
+<li><a href="https://drupal.org/project/nivo_slider">Nivo Slider</a></li>
+</ul>
+
+<h4>Contact</h4>
+<ul>
+<li><a href="https://drupal.org/project/contact_form_blocks">Contact Form Blocks</a></li>
+</ul>
+
+<h3>Porto Content Data</h3>
+<p>If you used the "theme only" option to install the theme on an existing install that already has content we recommend you use our Porto Content Data module to create the additional content types, fields and Views needed to fully utilize the theme. You will find it in the assets folder in the root of the folder you downloaded from ThemeForest. This module is a custom <a href="http://drupal.org/project/features" target="_blank">Features</a> module and will not run without it. We recommend copying all of the modules from the /demo/porto/sites/all/modules folder into your install if you do not already have them. After you have all the modules simply upload and activate the Porto Content Data module and the content types, fields and Views will automatically be created.</p>
+
+<h2>Image Sliders</h2>
+<h4>Mega Slider</h4>
+<p>Porto includes the Drupal <a href="http://codecanyon.net/item/mega-slider/4313171" target="_blank">Mega Slider</a> module. This module offers an incredible number of options to create the exact slider to meet your needs. To begin configuring your slider visit /admin/structure/md-slider and press the "add new slider" link. You can find documentation for the slider inside the md_slider module folder and you can reference the video below.</p>
+
+<p><iframe width="560" height="315" src="http://www.youtube.com/embed/G2LW6RrjhvM" frameborder="0" allowfullscreen></iframe></p>
+
+<h4>NivoSlider</h4>
+<p>If you would like to use a NivoSlider image slider on your site, simply install the NivoSlider module and visit /admin/structure/nivo-slider to set up and configure your slider. A block region is created for your slider that you can use in any block region of your choosing.</p>
+
+<h2>Front Page</h2>
+<p>The front page seen on the Porto demo consists of various block regions. Some are generated by modules (ie Mega Slider), others by Views, and some are custom blocks with special markup. You can find all of the markup used on the demo front page inside the /examples/front-page-blocks folder in the root of the theme folder.</p>
+
+<h2>One Page Site</h2>
+<p>New in version 1.1 is support for a "one-page" style page where all of the content is on a single page. For an example of what this looks like you can refer to the demo page <a href="http://refaktorthemes.com/porto/one-page" target="_blank">here.</a>
+A custom page template called page--onepage.tpl.php was created and is intended to work with a page with the url-alias "one-page".  A new block region called "One Page" was created to be used specifically with this page template. It is completely optional, but it can allow you to keep better track of your different blocks.</p>
+
+<h4>One Page Menu</h4>
+<p>The one page template also supports a smooth scrolling effect to #anchor elements. For example, you have four sections on your page: #about, #services, #team, #contact. Each of your menu items can link to those anchor elements by using the following URL structure: "node/ID/#contact". ID in this case is the node ID of the page you have created to use for the "one-page" template. To find the id simply visit /admin/content and press edit on that page. The URL will tell you the ID.</p>
+
+<p>If you are using the Latest Projects block, you can link to #projects. If you are using the One Page Team block, you can link to #team. If you wish to link to a custom block with your own markup, simply add an id="" attribute to the main div of your block content that matches your menu link.</p>
+
+<h2>Theme Settings</h2>
+<p>Visit /admin/appearance/settings/Porto to configure your theme's settings. You can select your color scheme, add your own custom CSS, add your own custom logo, etc.</p>
+
+<h2>Custom Content Types</h2>
+
+<h4>Portfolio</h4>
+
+<img src="images/porto-portfolio.png"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Image:</strong> The default Image field used for uploading the images.</li>
+<li><strong>Portfolio Category:</strong> This is a term reference field that is linked to a vocabulary created specifically for this content type.</li>
+</ul>
+
+<p><strong>Portfolio Block - Example: <a href="http://refaktorthemes.com/porto/portfolio-4-columns" target="_blank"> http://refaktorthemes.com/porto/portfolio-4-columns</a></strong></p>
+<p>This is the standard Portfolio style which utilizes the "Portfolio Block Page" View. If you are not using the full demo or did not use the Custom Content module you can use the code in /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) to import this View. Then simply place the "View: Portfolio Block" in the Content region and configure the block visibility settings to your liking.</p>
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/node/node--portfolio.tpl.php</li>
+<li>/templates/field--field_image--portfolio.tpl.php</li>
+<li>/templates/node/node--view--portfolio--block.tpl.php</li>
+<li>/templates/views/views-view--portfolio-block.tpl.php</li>
+</ul>
+
+<h4>Portfolio Columns</h4>
+<p>To change the number of items appear in a row in the Portfolio block visit the theme settings (/admin/appearance/settings/Porto).</p>
+
+<h4>Related Projects:</h4>
+Porto also includes support for a "Related Projects" block that you can use to showcase additional Portfolio items on the single Portfolio node pages, or anywhere else you would like. If you are not using the full demo or did not use the Custom Content module you can use the code in /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) to import this View. Then simply place the "View: Related Projects" in the Content region and configure the block visibility settings to your liking.</p>
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/node/node--view--related-projects--block.tpl.php</li>
+<li>/templates/views/views-view--related-projects.tpl.php</li>
+</ul>
+
+<h4>Portfolio Filters:</h4>
+<p>The Portfolio includes support for an Isotope filter effect powered by Taxonomy terms. To utilize this effect visit /admin/structure/taxonomy and create a new vocabulary (example: Portfolio). After creating your vocabulary you can create the terms you wish to use to categorize your portfolio items. This taxonomy vocabulary can be linked to the Portfolio content type via a term reference field so you can select the category or categories you want to place your items into.</p>
+
+<p>The filters are powered by a View called Portfolio Filters that is placed in the View header as a global view area. If you don't already have this view you can use the code in /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) to import as a View for placement in the View header of the Portfolio view.</p>
+
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/views/views-view-list--portfolio-filters.tpl.php</li>
+<li>/templates/views/views-view-fields--portfolio-filters.tpl.php</li>
+</ul>
+
+<h4>Team</h4>
+
+<p><strong>Team Block - Example: <a href="http://refaktorthemes.com/porto/team" target="_blank"> http://refaktorthemes.com/porto/team</a></strong></p>
+
+<img src="images/porto-team.png"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Image:</strong> The default Image field used for uploading the images.</li>
+<li><strong>Portfolio Category:</strong> This is a term reference field that is linked to a vocabulary created specifically for this content type.</li>
+<li><strong>Team Bio:</strong> A text field used to enter a short description about the team member.</li>
+<li><strong>Facebook Link:</strong> Used to add a link to the team member's Facebook page.</li>
+<li><strong>Twitter Link:</strong> Used to add a link to the team member's Twitter page.</li>
+<li><strong>LinkedIn Link:</strong> Used to add a link to the team member's LinkedIn page.</li>
+</ul>
+
+<p>Somewhat similar to the Portfolio, the Team block can be used to showcase your site or company's team members. If you are not using the full demo or did not use the Custom Content module you can use the code in /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) to import this View. Then simply place the "View: Team" in the Content region and configure the block visibility settings to your liking.</p>
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/node/node--view--team--block.tpl.php</li>
+<li>/templates/views/views-view--team.tpl.php</li>
+</ul>
+
+<h4>Team Filters:</h4>
+<p>The Team block view also includes support for an Isotope filter effect powered by Taxonomy terms. To utilize this effect visit /admin/structure/taxonomy and create a new vocabulary (example: Team). After creating your vocabulary you can create the terms you wish to use to categorize your portfolio items. This taxonomy vocabulary can be linked to the Team content type via a term reference field so you can select the category or categories you want to place your items into.</p>
+
+<p>The filters are powered by a View called Team Filters that is placed in the View header as a global view area. If you don't already have this view you can use the code in /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) to import as a View for placement in the View header of the Team view.</p>
+
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/views/views-view-list--team-filters.tpl.php</li>
+<li>/templates/views/views-view-fields--team-filters.tpl.php</li>
+</ul>
+
+<h4>Carousel</h4>
+<img src="images/porto-carousel.png"><br/><br/>
+<p>This content type lets you create a Flexslider-powered image carousel. It utilizes just the standard Image field (field_image) set to allow an unlimited number of images. </p>
+
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Image:</strong> The default Image field used for uploading the images.</li>
+</ul>
+
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/node/node--carousel.tpl.php</li>
+<li>/templates/views/views-view--client-carousel.tpl.php</li>
+<li>/templates/views/views-view-unformatted--client-carousel.tpl.php</li>
+</ul>
+
+<p>The export code /views-exports/carousel.txt can be used to create the Carousel View which uses a Block display. This block can then be added to the region of your choice.</p>
+
+<h4>Testimonials</h4>
+<img src="images/porto-testimonials.png"><br/><br/>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Testimonial Content:</strong> Used for the written content of the testimonial.</li>
+<li><strong>Testimonial Image:</strong> The default Image field used for uploading the testimonial author's image.</li>
+<li><strong>Testimonial Name:</strong> A text field for the name of the testimonial's author.</li>
+<li><strong>Testimonial Info:</strong> A text field for adding additional info about the testimonial's author such as their company or organization.</li>
+</ul>
+
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/node/node--testimonials.tpl.php</li>
+<li>/templates/views/views-view--testimonials.tpl.php</li>
+<li>/templates/views/views-view-unformatted--testimonials.tpl.php</li>
+</ul>
+
+<p>The export code /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) can be used to create the Testimonials View which uses a Block display. This block can then be added to the region of your choice.</p>
+
+<h4>FAQ</h4>
+<img src="images/porto-faq.png"><br/><br/>
+
+<p><strong>Fields:</strong></p>
+<ul>
+<li>Active: This is a simple boolean field type used to set whether or not the FAQ item is open or "active" by default.</li>
+</ul>
+
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/node/node--faq.tpl.php</li>
+<li>/templates/views/views-view--faq.tpl.php</li>
+<li>/templates/views/views-view-unformatted--faq.tpl.php</li>
+</ul>
+
+<p>The export code /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) can be used to create the FAQ View which uses a Block display. This block can then be added to the region of your choice.</p>
+
+<h4>Parallax</h4>
+<img src="images/porto-parallax.png"><br/><br/>
+
+<p><strong>Fields:</strong></p>
+<ul>
+<li>Background Image: The standard image field for uploading the image background for your Parallax content.</li>
+<li>Parallax Icon: Add a Font Awesome icon class to use in your Block. Classes can be found <a href="http://fortawesome.github.io/Font-Awesome/icons/" target="_blank">here.</a></li>
+<li>Big Caption: Use this field to add a large size caption to your content.</li>
+<li>Small Caption: Use this field to add a small size caption to your content.</li>
+<li>Text Color: select either black or white text color.</li>
+<li>Parallax Category: term reference field to add a taxonomy term association with your Parallax content..</li>
+</ul>
+
+<p><strong>Template files</strong></p>
+<ul>
+<li>/templates/node/node--parallax.tpl.php</li>
+<li>/templates/views/views-view--parallax.tpl.php</li>
+<li>/templates/views/views-view-unformatted--parallax.tpl.php</li>
+</ul>
+
+<p>The export code /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) can be used to create the Parallax View which uses a Block displays. These blocks can then be added to the region of your choice.</p>
+
+<h2>Blog (posts)</h2>
+<p>The Porto demo uses a View to display the article content type nodes. If you do not already have this View using one of our different installation methods you can use the code found in /assets/views_exports/portfolio-filters.txt (in the root of the ThemeForest download files) to import the View and all its settings. To change the style of image on that View page you can use the Blog View Image option in the theme settings (/admin/appearance/settings/Porto).</p>
+<h4>Author bio</h4>
+<p>To display a small author bio on the article node page, install the <a href="https://drupal.org/project/profile2" target="_blank">Profile2 module</a> and follow these steps to configure it:</p>
+<ol>
+<li>Visit /admin/structure/profiles and create a new profile type called "main". If this already exists skip to the next step.</li>
+<li>Add a field to that profile called "Bio". If this exists skip to the next step.</li>
+<li>Visit /admin/people and edit your user. Then click on the "Main Profile" tab in the top right corner next to the "Account" link to add your author bio.</li>
+</ol>
+
+<h2>Block Regions</h2>
+<p>Porto features 16 block regions where you can add your own custom content. Visit yourdomain.com/admin/structure/block to add your own content to the defined block regions. Press "Add Block" to create a new custom blog, or select an existing block from the Disabled list below the defined block regions.</p>
+<h4>Header Block Regions</h4>
+<p>Porto features four header regions: Header Branding, Header Top, Header Menu and Header Icons. You can use the "demonstrate block regions" link on /admin/structure/block to see exactly where these are located, but the names are fairly self explanatory. If you would like to mimic the social icon region seen next to the menu on the demo you can use the following markup in a block:</p>
+<pre>
+&lt;div class=&quot;social-icons&quot;&gt;
+	&lt;ul class=&quot;social-icons&quot;&gt;
+		&lt;li class=&quot;facebook&quot;&gt;&lt;a href=&quot;http://www.facebook.com/&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;twitter&quot;&gt;&lt;a href=&quot;http://www.twitter.com/&quot; target=&quot;_blank&quot; title=&quot;Twitter&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;linkedin&quot;&gt;&lt;a href=&quot;http://www.linkedin.com/&quot; target=&quot;_blank&quot; title=&quot;Linkedin&quot;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;	
+</pre>
+
+<h4>Content Block Regions</h4>
+<p>Porto has a total of 5 content block regions: Before Content, Content, Sidebar Left, Sidebar Right and After Content. Like the Header regions described above these regions are fairly self explanatory. One thing to note is that the before and after content regions are called outside of the main content wrap so you can use completely full width content (like the Image Slider) or use your own custom wrappers. Those regions are there to do whatever you like with and are not restricted by any additional markup.</p>
+<p>Porto also supports Flexslider, and to display a slideshow in your articles simply upload more than one image to the Image field setting when editing your article node.</p>
+
+<h4>Footer Block Regions</h4>
+<p>Finally there are 6 footer block regions available, four individual four column regions and two additional six column regions below. </p>
+
+<h2>Extras</h2>
+<h4>Tabbed Recent/Popular posts block</h4>
+<p>We have included support for a tabbed recent/popular posts block powered by views. If you're not working off the full install and did not use the custom content module to create all the theme content types, fields and views you can import the /assets/views_exports/tabbed-recent-posts.txt and /assets/views_exports/tabbed-popular-posts.txt views (in that order) which will create the necessary views. From there add the "Tabbed Popular Posts" block to the region of your choice (not the recent posts block, that is used inside the popular posts view block). You can also add an optional "thumbnail" field to your article content type to upload a small thumbnail image that is used within the block.</p>
+<h4>Code Examples</h4>
+<p>We've included some code examples inside the /assets/examples folder in the root of the folder you downloaded from ThemeForest with some markup used on several of the demo page templates.</p>
+<h4>Flickr Feed</h4>
+<p>The following markup can be used to generate a Flickr Feed anywhere on your site:</p>
+<pre>
+&lt;script&gt;
+	jQuery(document).ready(function ($) {
+		$('ul.flickr-feed').jflickrfeed({
+			limit: 6,
+			qstrings: {
+				id: '93691989@N03'
+			},
+			itemTemplate: '&lt;li&gt;&lt;a rel=&quot;flickr[pp_gal]&quot; href=&quot;{{image_b}}&quot;&gt;&lt;span class=&quot;thumbnail&quot;&gt;&lt;img alt=&quot;{{title}}&quot; src=&quot;{{image_s}}&quot; /&gt;&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;'
+	  });
+	});
+&lt;/script&gt;
+</pre>
+<h4>Twitter Widget</h4>
+<p>Before you can use the Twitter widget you need to configure the Twitter options in the theme settings (/admin/appearance/settings/porto). To get the necessary authentication keys you must visit <a href="https://dev.twitter.com/apps" target="_blank">https://dev.twitter.com/apps</a> and log in with your Twitter account. Once there you can create an app and generate the OAuth keys needed to enter into the theme settings. Once you have those entered you can use the following markup in a Block (make sure to set the text filter to PHP code):</p>
+<pre>
+&lt;h6 class=&quot;whitetext bold meta&quot;&gt;PortoON TWITTER&lt;/h6&gt;
+&lt;div class='tweet query midtoppadding'&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+                        
+    jQuery(document).ready(function ($) {
+      
+      $(&quot;.tweet&quot;).tweet({
+        modpath: '&lt;?php global $parent_root; echo $parent_root;?&gt;/includes/twitter/',
+        username: &quot;envato&quot;,
+        avatar_size: 34,
+        count: 3,
+        loading_text: &quot;loading tweets...&quot;
+      });
+    
+    });
+    
+  &lt;/script&gt;
+</pre>
+<h4>Lightbox</h4>
+<p>The following is an example of how you can create a very simple image lightbox in your node content:</p>
+<pre>
+&lt;a class=&quot;thumbnail lightbox pull-left&quot;	href=&quot;path/to/img.jpg&quot; data-plugin-options='{&quot;type&quot;:&quot;image&quot;}'&gt;
+	&lt;img src=&quot;path/to/img.jpg&quot;&gt;
+	&lt;span class=&quot;zoom&quot;&gt;
+		&lt;i class=&quot;icon-16 icon-white-shadowed icon-search&quot;&gt;&lt;/i&gt;
+	&lt;/span&gt;
+&lt;/a&gt;
+</pre>
+<h4>Social Icons</h4>
+<p>You can easily display social icons with a roll-over effect with the following markup:</p>
+<pre>
+&lt;div class=&quot;social-icons&quot;&gt;
+	&lt;ul class=&quot;social-icons&quot;&gt;
+		&lt;li class=&quot;facebook&quot;&gt;&lt;a href=&quot;http://www.facebook.com/&quot; target=&quot;_blank&quot; title=&quot;Facebook&quot;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;twitter&quot;&gt;&lt;a href=&quot;http://www.twitter.com/&quot; target=&quot;_blank&quot; title=&quot;Twitter&quot;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+		&lt;li class=&quot;linkedin&quot;&gt;&lt;a href=&quot;http://www.linkedin.com/&quot; target=&quot;_blank&quot; title=&quot;Linkedin&quot;&gt;Linkedin&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+<p>Here is a list of the following icons that are supported:</p>
+<ul>
+<li>digg</li>
+<li>dribble</li>
+<li>facebook</li>
+<li>flickr</li>
+<li>forrst</li>
+<li>googleplus</li>
+<li>html5</li>
+<li>icloud</li>
+<li>lastfm</li>
+<li>linkedin</li>
+<li>myspace</li>
+<li>paypal</li>
+<li>picasa</li>
+<li>pinterest</li>
+<li>reddit</li>
+<li>rss</li>
+<li>skype</li>
+<li>stumbleupon</li>
+<li>tumblr</li>
+<li>twitter</li>
+<li>vimeo</li>
+<li>wordpress</li>
+<li>yahoo</li>
+<li>youtube</li>
+<li>github</li>
+<li>behance</li>
+<li>yelp</li>
+<li>mail</li>
+<li>instagram</li>
+<li>foursqaure</li>
+<li>zerply</li>
+</ul>
+<h4>Toggle</h4>
+<p>If you want to manually create a toggle section like the FAQ page you can use the following markup:</p>
+<pre>
+&lt;div class=&quot;toogle&quot;&gt;
+	&lt;section class=&quot;toggle active&quot;&gt;
+		&lt;label&gt;Curabitur eget leo at velit imperdiet vague iaculis vitaes?&lt;/label&gt;
+		&lt;div class=&quot;toggle-content&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+	&lt;section class=&quot;toggle&quot;&gt;
+		&lt;label&gt;Curabitur eget leo at imperdiet vague iaculis vitaes?&lt;/label&gt;
+		&lt;div class=&quot;toggle-content&quot;&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/div&gt;
+</pre>
+<h4>CSS3 Animations</h4>
+<p>Version 1.1.2 of the theme introduced support for CSS3 animations which can be seen here on our <a href="http://refaktorthemes.com/porto/animations" target="_blank">demo></a>. Please refer to the /examples/animations.php file for code examples for each of the animations.</p>
+<h2>Thank You</h2>
+<p>Thank you very much for purchasing the Porto Responsive Drupal 7 theme. Once again if you have any issues or feedback please connect via the <a href="http://themeforest.net/user/refaktor#from" target="_blank">ThemeForest author page</a>. Enjoy using Porto!</p>
+</p>&copy 2014 Refaktor.
+</div>
+<script>$('#toc').toc();</script></body></html>

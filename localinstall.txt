@@ -1,0 +1,5 @@
+MySQL Database
+db: yda
+user: yda
+pass: yda
+
