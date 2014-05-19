@@ -57,7 +57,7 @@
     </div>  
 	</header>
 	
-	<div role="main" class="main">
+	<div role="main" class="main container">
 	
 	  <?php if ( ($breadcrumb) AND (!drupal_is_front_page()) ): ?>
 	  <section class="page-top breadcrumb-wrap">
@@ -127,7 +127,11 @@
 	</div>
 
   <?php print render($page['after_content']); ?>
-
+<?php
+//Ross Smith 2014-05-19
+//Moved footer outside of "body" div
+?>	
+</div>
 <footer>
   <div class="container">
     <div class="row">
@@ -165,26 +169,24 @@
 		</div>  
   </div>	
 
-	  <div class="footer-copyright">  
-	    <div class="container">
-	      <div class="row">
-			    <div class="span6">
-			    
-					  <?php if (isset($page['footer_bottom_left'])) : ?>
-					    <?php print render($page['footer_bottom_left']); ?>
-					  <?php endif; ?>
-			  
-			    </div>
-			    <div class="span6">
-			    
-					  <?php if (isset($page['footer_bottom_right'])) : ?>
-					    <?php print render($page['footer_bottom_right']); ?>
-					  <?php endif; ?>
-			  
-			    </div>
-	      </div>  
-	    </div>
-	  </div>  
-	</footer>
-	
-</div>	
+  <div class="footer-copyright">  
+    <div class="container">
+      <div class="row">
+		    <div class="span6">
+		    
+				  <?php if (isset($page['footer_bottom_left'])) : ?>
+				    <?php print render($page['footer_bottom_left']); ?>
+				  <?php endif; ?>
+		  
+		    </div>
+		    <div class="span6">
+		    
+				  <?php if (isset($page['footer_bottom_right'])) : ?>
+				    <?php print render($page['footer_bottom_right']); ?>
+				  <?php endif; ?>
+		  
+		    </div>
+      </div>  
+    </div>
+  </div>  
+</footer>

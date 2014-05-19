@@ -105,10 +105,22 @@ function porto_form_system_theme_settings_alter(&$form, &$form_state) {
       '#title' => t('Body Background'),
       '#default_value' => theme_get_setting('body_background'),
       '#options' => array(
+        'yda_custom_background' => t('YDA Custom Background'),
         'porto_backgrounds' => t('Background Image (default)'),
         'custom_background_color' => t('Background Color'),
       ),
     );
+    
+    //YDA Custom Background
+	    $form['options']['layout']['background']['yda_custom_background'] = array(
+	      '#type' => 'select',
+	      '#title' => t('YDA Custom Background'),
+	      '#default_value' => theme_get_setting('yda_custom_background'),
+	      '#options' => array(
+	        'on' => t('On'),
+	        'off' => t('Off'),
+	      ),
+	    );
     
     // Porto Background Choices
     $form['options']['layout']['background']['background_select'] = array(
