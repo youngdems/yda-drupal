@@ -93,7 +93,7 @@
 				  </aside>
 				  <?php endif; ?>
 			
-					<div class="<?php if ( ($page['sidebar_right']) AND ($page['sidebar_left']) ) { echo "span6";} elseif ( ($page['sidebar_right']) OR ($page['sidebar_left']) ) {  echo "span9"; }  else { echo "span12"; } ?>">
+					<div class="<?php if ( ($page['sidebar_right']) AND ($page['sidebar_left']) ) { echo "span6";} elseif ( ($page['sidebar_right']) OR ($page['sidebar_left']) ) {  echo "span8"; }  else { echo "span12"; } ?>">
 					  
 					  <?php print $messages; ?>
 					  
@@ -113,7 +113,7 @@
 					</div>
 			  
 				  <?php if ( ($page['sidebar_right']) ) : ?>
-				  <div class="<?php if ($page['sidebar_left']) { echo "span3";} else { echo "span3"; } ?>">
+				  <div class="<?php if ($page['sidebar_left']) { echo "span4";} else { echo "span4"; } ?>">
 				    <?php print render($page['sidebar_right']); ?>
 				  </div>
 				  <?php endif; ?>

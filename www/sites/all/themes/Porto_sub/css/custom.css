@@ -9,6 +9,7 @@ body {
 
 body.boxed div.body {
 	margin: 35px auto;
+	width: 980px;
 }
 
 body h2 {
@@ -186,7 +187,7 @@ body #content .node-readmore a {
 }
 
 .region.region-sidebar-right div.block div.content {
-	padding: 10px 10px 20px;
+	padding: 10px 10px 20px 50px;
 }
 
 .region.region-sidebar-right div.block::after {
@@ -226,6 +227,10 @@ body #content .node-readmore a {
 .region.region-sidebar-right div#block-search-form.block {
 	margin-bottom: 0px;
 	background: none;
+}
+
+.region.region-sidebar-right div#block-search-form.block div.content {
+	padding: 0px;
 }
 
 .region.region-sidebar-right div#block-search-form.block::after {
