@@ -59,14 +59,23 @@ body div.body>header>div.container>nav {
 
 /* MAIN MENU */
 
+ul.nice-menu>li>ul.sub-menu {
+	top: 40px !important;
+}
+
 body div.body>header nav {
-	background: url(../img/yda/navbg.png) top left repeat-x;
+	background:  #871523 url(../img/yda/navbg.png) top left repeat-x;
 	height: 40px;
 	font-weight: normal;
 }
 
-body div.body>header nav ul li {
-	background: none;
+body div.body>header nav ul.nice-menu-down li li {
+	background:  #871523 !important;
+}
+
+body div.body>header nav ul li,
+body div.body>header nav ul.nice-menu-down li {
+	background:  #871523 url(../img/yda/navbg.png) top left repeat-x !important;
 	border-radius: 0px;
 	border-right: 1px solid #af424f;
 	border-left: 1px solid #871523;
@@ -74,11 +83,13 @@ body div.body>header nav ul li {
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 	font-weight: 600;
 	margin: 0px;
+	border-width: 0px 1px;
+	min-height: 32px;
+	padding-top: 8px;
 }
 
 body div.body>header nav ul li.active a,
 body div.body>header nav ul li a {
-	background: none;
 	color: #d5b7bb;
 }
 
