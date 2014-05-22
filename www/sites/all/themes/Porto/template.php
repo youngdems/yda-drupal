@@ -5,6 +5,7 @@
 global $theme_root, $parent_root, $theme_path;
 $theme_root = base_path() . path_to_theme();
 $parent_root = base_path() . drupal_get_path('theme', 'porto');
+$sub_root = base_path() . drupal_get_path('theme', 'porto_sub');
 
 /**
  * Implements hook_html_head_alter().
@@ -463,7 +464,16 @@ function porto_preprocess_html(&$vars){
    )
  );
 
-  $background_image = array(
+ //=== Ross Smith 2014-05-19
+ //Added:
+ $yda_custom_background = array(
+   '#type' => 'markup',
+   '#markup' => "<style type='text/css'>body {background:#0a3b56 url(".$parent_root."/img/yda/background.png) top center repeat fixed !important;}</style> ",
+   '#weight' => 1,
+ );
+ //=== End addition
+ 
+ $background_image = array(
    '#type' => 'markup',
    '#markup' => "<style type='text/css'>body {background-image:url(".$parent_root."/img/patterns/".theme_get_setting('background_select').".png);}</style> ",
    '#weight' => 1,
@@ -477,13 +487,23 @@ function porto_preprocess_html(&$vars){
 
  drupal_add_html_head( $viewport, 'viewport');
 
- if (theme_get_setting('body_background') == "porto_backgrounds" && theme_get_setting('site_layout') == "boxed") {
-   drupal_add_html_head( $background_image, 'background_image');
+ //=== Ross Smith 2014-05-19
+ //Added:
+ if (theme_get_setting('yda_custom_background') == "on" && theme_get_setting('site_layout') == "boxed") {
+   drupal_add_html_head( $yda_custom_background, 'yda_custom_background');
  }
+ 
+ else {
+ //=== End addition
+   if (theme_get_setting('body_background') == "porto_backgrounds" && theme_get_setting('site_layout') == "boxed") {
+     drupal_add_html_head( $background_image, 'background_image');
+   }
 
- if (theme_get_setting('body_background') == "custom_background_color") {
-   drupal_add_html_head( $background_color, 'background_color');
+   if (theme_get_setting('body_background') == "custom_background_color") {
+     drupal_add_html_head( $background_color, 'background_color');
+   }
  }
+ 
  // Add boxed class if layout is set that way.
  if (theme_get_setting('site_layout') == 'boxed'){
    $vars['classes_array'][] = 'boxed';

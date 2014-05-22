@@ -57,7 +57,7 @@
     </div>  
 	</header>
 	
-	<div role="main" class="main">
+	<div role="main" class="main container">
 	
 	  <?php if ( ($breadcrumb) AND (!drupal_is_front_page()) ): ?>
 	  <section class="page-top breadcrumb-wrap">
@@ -93,7 +93,7 @@
 				  </aside>
 				  <?php endif; ?>
 			
-					<div class="<?php if ( ($page['sidebar_right']) AND ($page['sidebar_left']) ) { echo "span6";} elseif ( ($page['sidebar_right']) OR ($page['sidebar_left']) ) {  echo "span9"; }  else { echo "span12"; } ?>">
+					<div class="<?php if ( ($page['sidebar_right']) AND ($page['sidebar_left']) ) { echo "span6";} elseif ( ($page['sidebar_right']) OR ($page['sidebar_left']) ) {  echo "span8"; }  else { echo "span12"; } ?>">
 					  
 					  <?php print $messages; ?>
 					  
@@ -113,7 +113,7 @@
 					</div>
 			  
 				  <?php if ( ($page['sidebar_right']) ) : ?>
-				  <div class="<?php if ($page['sidebar_left']) { echo "span3";} else { echo "span3"; } ?>">
+				  <div class="<?php if ($page['sidebar_left']) { echo "span4";} else { echo "span4"; } ?>">
 				    <?php print render($page['sidebar_right']); ?>
 				  </div>
 				  <?php endif; ?>
@@ -127,7 +127,11 @@
 	</div>
 
   <?php print render($page['after_content']); ?>
-
+<?php
+//Ross Smith 2014-05-19
+//Moved footer outside of "body" div
+?>	
+</div>
 <footer>
   <div class="container">
     <div class="row">
@@ -165,26 +169,24 @@
 		</div>  
   </div>	
 
-	  <div class="footer-copyright">  
-	    <div class="container">
-	      <div class="row">
-			    <div class="span6">
-			    
-					  <?php if (isset($page['footer_bottom_left'])) : ?>
-					    <?php print render($page['footer_bottom_left']); ?>
-					  <?php endif; ?>
-			  
-			    </div>
-			    <div class="span6">
-			    
-					  <?php if (isset($page['footer_bottom_right'])) : ?>
-					    <?php print render($page['footer_bottom_right']); ?>
-					  <?php endif; ?>
-			  
-			    </div>
-	      </div>  
-	    </div>
-	  </div>  
-	</footer>
-	
-</div>	
+  <div class="footer-copyright">  
+    <div class="container">
+      <div class="row">
+		    <div class="span6">
+		    
+				  <?php if (isset($page['footer_bottom_left'])) : ?>
+				    <?php print render($page['footer_bottom_left']); ?>
+				  <?php endif; ?>
+		  
+		    </div>
+		    <div class="span6">
+		    
+				  <?php if (isset($page['footer_bottom_right'])) : ?>
+				    <?php print render($page['footer_bottom_right']); ?>
+				  <?php endif; ?>
+		  
+		    </div>
+      </div>  
+    </div>
+  </div>  
+</footer>
